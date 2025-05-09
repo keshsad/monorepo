@@ -1,0 +1,16 @@
+{
+  "name": "keshsad-monorepo",
+  "version": "0.0.0",
+  "scripts": {
+    "sso": "aws sso login --sso-session=keshsad",
+    "dev": "sst dev",
+    "deploy": "sst deploy --stage dev",
+    "deploy:prod": "sst deploy --stage production"
+  },
+  "dependencies": {
+    "sst": "3.14.11"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.149"
+  }
+}
