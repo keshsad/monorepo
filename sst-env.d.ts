@@ -10,6 +10,16 @@ declare module "sst" {
       "type": "sst.aws.Function"
       "url": string
     }
+    "PathRedirect": {
+      "name": string
+      "type": "sst.aws.Function"
+      "url": string
+    }
+    "RootRedirect": {
+      "name": string
+      "type": "sst.aws.Function"
+      "url": string
+    }
     "Router": {
       "type": "sst.aws.Router"
       "url": string

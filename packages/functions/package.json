@@ -1,0 +1,11 @@
+{
+    "name": "@keshsad/functions",
+    "version": "0.0.0",
+    "type": "module",
+    "dependencies": {
+        "sst": "*"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8"
+    }
+}
