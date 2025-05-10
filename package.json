@@ -1,6 +1,9 @@
 {
   "name": "keshsad-monorepo",
   "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "sso": "aws sso login --sso-session=keshsad",
     "dev": "sst dev",
