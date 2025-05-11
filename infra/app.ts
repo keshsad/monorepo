@@ -21,6 +21,9 @@ export const site = new sst.aws.React("WebSite", {
   environment: {
     API_URL: api.url
   },
+  dev: {
+    url: "http://localhost:5173/",
+  }
 })
 
 export const rootRedirect = new sst.aws.Function("RootRedirect", {
