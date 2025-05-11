@@ -1,4 +1,7 @@
 /// <reference path="./.sst/platform/config.d.ts" />
+
+import { site } from "./infra/app";
+
 export default $config({
   app(input) {
     return {
@@ -18,5 +21,9 @@ export default $config({
   },
   async run() {
     await import("./infra/app");
+
+    return {
+      WebSite: site.url
+    }
   },
 });
