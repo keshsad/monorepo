@@ -26,6 +26,25 @@ export const site = new sst.aws.React("WebSite", {
   }
 })
 
+export const rishi = new sst.aws.StaticSite("WebRishi", {
+  path: "apps/rishi",
+  router: {
+    instance: router,
+    domain: subdomain("rishi")
+  },
+  environment: {
+    API_URL: api.url,
+  },
+  build: {
+    command: "make build",
+    output: "dist",
+  },
+  dev: {
+    url: "http://localhost:8080/",
+    command: "make watch",
+  },
+})
+
 export const rootRedirect = new sst.aws.Function("RootRedirect", {
   handler: "packages/functions/src/root-redirect.handler",
   url: true
