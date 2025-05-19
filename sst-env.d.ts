@@ -5,6 +5,24 @@
 
 declare module "sst" {
   export interface Resource {
+    "Api": {
+      "name": string
+      "type": "sst.aws.Function"
+      "url": string
+    }
+    "RootRedirect": {
+      "name": string
+      "type": "sst.aws.Function"
+      "url": string
+    }
+    "Router": {
+      "type": "sst.aws.Router"
+      "url": string
+    }
+    "WebSite": {
+      "type": "sst.aws.React"
+      "url": string
+    }
   }
 }
 /// <reference path="sst-env.d.ts" />
