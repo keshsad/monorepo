@@ -19,6 +19,10 @@ declare module "sst" {
       "type": "sst.aws.Router"
       "url": string
     }
+    "WebRishi": {
+      "type": "sst.aws.StaticSite"
+      "url": string
+    }
     "WebSite": {
       "type": "sst.aws.React"
       "url": string
@@ -28,4 +32,4 @@ declare module "sst" {
 /// <reference path="sst-env.d.ts" />
 
 import "sst"
-export {}
+export { }

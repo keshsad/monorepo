@@ -18,12 +18,14 @@ export default $config({
     };
   },
   async run() {
-    await import("./infra/app");
+    const app = await import("./infra/app");
     const stage = await import("./infra/stage")
 
     return {
       domain: stage.domain,
       permananetStage: stage.isPermanentStage,
+      siteUrl: app.site.url,
+      rishiUrl: app.rishi.url,
     }
   },
 });
