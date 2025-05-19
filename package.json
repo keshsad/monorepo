@@ -12,7 +12,7 @@
     "deploy:prod": "sst deploy --stage production"
   },
   "dependencies": {
-    "sst": "3.14.11"
+    "sst": "3.14.24"
   },
   "devDependencies": {
     "@types/aws-lambda": "8.10.149"
