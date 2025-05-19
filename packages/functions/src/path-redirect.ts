@@ -1,6 +1,8 @@
 import { type Handler } from "aws-lambda"
 
 export const handler: Handler = async (event) => {
+  console.log(event)
+
   const path = event.rawPath
   const redirectUrl = `https://site.keshsad.com${path}`
 
