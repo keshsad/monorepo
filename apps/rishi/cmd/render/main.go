@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"v3/cmd/web/pages"
+	"github.com/keshsad/monorepo/apps/rishi/cmd/web/pages"
 )
 
 func renderStaticFiles() {

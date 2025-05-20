@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"v3/cmd/web"
-	"v3/cmd/web/pages"
+	"github.com/keshsad/monorepo/apps/rishi/cmd/web"
+	"github.com/keshsad/monorepo/apps/rishi/cmd/web/pages"
 
 	"github.com/a-h/templ"
 )

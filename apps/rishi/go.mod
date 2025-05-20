@@ -1,4 +1,4 @@
-module v3
+module github.com/keshsad/monorepo/apps/rishi
 
 go 1.24.0
 
