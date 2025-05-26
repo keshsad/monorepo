@@ -18,7 +18,8 @@ export default $config({
     };
   },
   async run() {
-    const app = await import("./infra/app");
+    const app = await import("./infra/app")
+    const shared = await import("./infra/shared")
     const stage = await import("./infra/stage")
 
     return {
@@ -26,6 +27,7 @@ export default $config({
       permananetStage: stage.isPermanentStage,
       siteUrl: app.site.url,
       rishiUrl: app.rishi.url,
+      apiUrl: app.api.url,
     }
   },
 });

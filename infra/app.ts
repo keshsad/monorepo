@@ -1,5 +1,5 @@
-import { router } from "./shared";
-import { subdomain } from "./stage";
+import { bucket, router } from "./shared";
+import { domain, subdomain } from "./stage";
 
 export const api = new sst.aws.Function("Api", {
   handler: "apps/api/main.go",
@@ -45,16 +45,18 @@ export const rishi = new sst.aws.StaticSite("WebRishi", {
   },
 })
 
-export const rootRedirect = new sst.aws.Function("RootRedirect", {
-  handler: "packages/functions/src/root-redirect.handler",
-  url: true
-})
+router.routeBucket("store." + domain, bucket)
+
+//export const rootRedirect = new sst.aws.Function("RootRedirect", {
+//  handler: "packages/functions/src/root-redirect.handler",
+//  url: true
+//})
 
 //export const pathRedirect = new sst.aws.Function("PathRedirect", {
 //  handler: "packages/functions/src/path-redirect.handler",
 //  url: true
 //})
 
-router.route("/", rootRedirect.url)
+//router.route("/", rootRedirect.url)
 //router.route("/*", pathRedirect.url)
 

@@ -10,10 +10,9 @@ declare module "sst" {
       "type": "sst.aws.Function"
       "url": string
     }
-    "RootRedirect": {
+    "Bucket": {
       "name": string
-      "type": "sst.aws.Function"
-      "url": string
+      "type": "sst.aws.Bucket"
     }
     "Router": {
       "type": "sst.aws.Router"
@@ -32,4 +31,4 @@ declare module "sst" {
 /// <reference path="sst-env.d.ts" />
 
 import "sst"
-export {}
+export { }
