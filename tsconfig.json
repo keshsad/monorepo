@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["./packages/core/src/*"],
+      "@site/*": ["./apps/site/src/*"],
+    },
+
     // Environment setup & latest features
     "lib": ["ESNext"],
     "target": "ESNext",
@@ -11,19 +17,32 @@
     // Bundler mode
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
     "noEmit": true,
 
     // Best practices
-    "strict": true,
-    "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
 
     // Some stricter flags (disabled by default)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": false,
+
+    // https://www.effect.solutions/tsconfig
+    "incremental": true,
+    "composite": true,
+    "verbatimModuleSyntax": true,
+    "rewriteRelativeImportExtensions": true,
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noUnusedLocals": true,
+    "noImplicitOverride": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "@effect/language-service",
+      },
+    ],
+  },
 }

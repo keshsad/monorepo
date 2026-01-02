@@ -1,0 +1,21 @@
+{
+  "name": "@keshsad/core",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run src/example/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "exports": {
+    "./*": [
+      "./src/*\/index.ts",
+      "./src/*.ts"
+    ]
+  }
+}
