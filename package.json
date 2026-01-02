@@ -1,12 +1,46 @@
 {
   "name": "@keshsad/monorepo",
+  "version": "0.0.0",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "apps/*"
+    ],
+    "catalog": {
+      "effect": "^3.19.13",
+      "drizzle-kit": "^0.31.8",
+      "drizzle-orm": "^0.45.0",
+      "better-sqlite3": "^12.5.0",
+      "@types/better-sqlite3": "^7.6.13",
+      "vite": "^7.2.6",
+      "vitest": "^4.0.15",
+      "tailwindcss": "^4.1.17",
+      "@tailwindcss/vite": "^4.1.17",
+      "@types/node": "^24",
+      "typescript": "^5.9.3"
+    },
+    "catalogs": {}
+  },
+  "scripts": {
+    "sso": "aws sso login",
+    "dev": "sst dev",
+    "deploy": "sst deploy --stage dev",
+    "core": "bun run --filter @keshsad/core dev",
+    "index": "bun run index.ts",
+    "site": "bun run --filter @keshsad/site dev --open"
+  },
   "devDependencies": {
+    "@cloudflare/workers-types": "4.20260101.0",
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "effect": "catalog:",
+    "sst": "3.17.25"
   }
 }
