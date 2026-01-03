@@ -6,12 +6,12 @@
 import "sst"
 declare module "sst" {
   export interface Resource {
-    "FitnessApp": {
-      "type": "sst.aws.TanstackStart"
-      "url": string
-    }
     "PersonalSite": {
       "type": "sst.aws.SvelteKit"
+      "url": string
+    }
+    "Router": {
+      "type": "sst.aws.Router"
       "url": string
     }
   }
