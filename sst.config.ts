@@ -14,9 +14,5 @@ export default $config({
     new sst.aws.SvelteKit("PersonalSite", {
       path: "apps/site",
     });
-
-    new sst.aws.TanStackStart("FitnessApp", {
-      path: "apps/fit",
-    });
   },
 });
