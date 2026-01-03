@@ -54,6 +54,6 @@
 	},
 	"dependencies": {
 		"better-sqlite3": "catalog:",
-		"svelte-kit-sst": "2.43.5"
+		"svelte-kit-sst": "catalog:"
 	}
 }
