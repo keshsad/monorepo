@@ -7,7 +7,12 @@ export default $config({
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
       home: "aws",
-      providers: { aws: "7.15.0" },
+      providers: {
+        aws: {
+          version: "7.15.0",
+          profile: input?.stage === "production" ? "keshsad-prod" : "keshsad-dev",
+        },
+      },
     };
   },
   async run() {
