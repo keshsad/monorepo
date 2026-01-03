@@ -11,6 +11,7 @@
     ],
     "catalog": {
       "effect": "^3.19.13",
+      "svelte-kit-sst": "2.43.5",
       "drizzle-kit": "^0.31.8",
       "drizzle-orm": "^0.45.0",
       "better-sqlite3": "^12.5.0",
@@ -28,10 +29,7 @@
     "sso": "aws sso login",
     "dev": "sst dev",
     "deploy": "sst deploy --stage dev",
-    "deploy:prod": "sst deploy --stage production",
-    "core": "bun run --filter @keshsad/core dev",
-    "index": "bun run index.ts",
-    "site": "bun run --filter @keshsad/site dev --open"
+    "deploy:prod": "sst deploy --stage production"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20260101.0",
