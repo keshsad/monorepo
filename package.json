@@ -28,6 +28,7 @@
     "sso": "aws sso login",
     "dev": "sst dev",
     "deploy": "sst deploy --stage dev",
+    "deploy:prod": "sst deploy --stage production",
     "core": "bun run --filter @keshsad/core dev",
     "index": "bun run index.ts",
     "site": "bun run --filter @keshsad/site dev --open"
